@@ -1,8 +1,23 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="ejercicios.plone4.tema">
 
-  <five:registerPackage package="." initialize=".initialize" />
+    <includeDependencies package="." />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="ejercicios.plone4.tema"
+        directory="profiles/default"
+        description="Installs the ejercicios.plone4.tema package"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <plone:static
+        type="theme"
+        directory="static"
+        />
 
 </configure>

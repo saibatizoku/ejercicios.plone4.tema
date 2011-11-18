@@ -1,0 +1,21 @@
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <replace theme="/html/head/base"
+        content="/html/head/base" />
+    <drop theme="/html/head/meta" />
+    <after content="/html/head/meta"
+        theme-children="/html/head" />
+    <before content="/html/head/style | /html/head/script | /html/head/link"
+        theme-children="/html/head"
+        />
+    <replace theme="/html/head/title"
+        content="html/head/title" />
+    <copy attributes="*"
+        css:theme="body"
+        css:content="body" />
+
+</rules>

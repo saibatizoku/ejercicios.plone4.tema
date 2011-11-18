@@ -26,6 +26,7 @@ setup(name='ejercicios.plone4.tema',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.app.theming',
       ],
       entry_points="""
       # -*- Entry points: -*-
